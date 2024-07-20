@@ -1,0 +1,105 @@
+/* Onboarding.css */
+
+.onboarding-screen {
+  background-color: #f8e9e9; 
+  display: flex;
+  flex-direction: column; 
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Arial', sans-serif; 
+
+  /* Center content both vertically and horizontally */
+  justify-content: center; 
+  align-items: center; 
+}
+
+/* Common Header Styles (if needed) */
+.header {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 20px; 
+  width: 100%; /* Make sure the header takes full width */
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Common Content Styles */
+.content {
+  flex: 1; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+}
+
+/* Onboarding1 Specific Styles */ 
+.onboarding1 .pause-icon {
+  margin-bottom: 60px; 
+}
+
+.onboarding1 h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 15px; 
+}
+
+.onboarding1 p {
+  font-size: 1rem; 
+  line-height: 1.6; 
+  margin-bottom: 30px; 
+  color: #333; 
+}
+
+.onboarding1 .account-text {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #555; 
+}
+
+/* Google Button Styles (Shared) */
+.google-button {
+  padding: 12px 25px;
+  border-radius: 30px; 
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center; 
+  margin-bottom: 10px;
+}
+
+.google-button.signup-button {
+  background-color: #2962ff;
+  color: white;
+}
+
+.google-button.login-button { 
+  background-color: white;
+  color: #2962ff;
+  border: 1px solid #2962ff; 
+}
+
+/* Onboarding2 Specific Styles */
+.onboarding2 ul {
+  text-align: left; 
+  margin-bottom: 30px; 
+  padding-left: 40px;
+}
+
+.onboarding2 .continue-button {
+  background-color: #303f9f; 
+  color: white;
+  padding: 15px 30px; 
+  border: none;
+  border-radius: 25px; 
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.onboarding2 .bell-icon {
+  margin-bottom: 20px; 
+}

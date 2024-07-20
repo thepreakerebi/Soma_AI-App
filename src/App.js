@@ -6,9 +6,6 @@ import { Onboarding1 } from './components/Onboarding/Onboarding1';
 import { Onboarding2 } from './components/Onboarding/Onboarding2';
 import './App.css'; // Import your CSS
 
-// Your Google Client ID
-const clientId = '';
-
 function App() {
   const [showSplash, setShowSplash] = useState(true);
 
@@ -30,7 +27,6 @@ function App() {
   };
 
   return (
-    <GoogleOAuthProvider clientId={clientId}>
       <BrowserRouter>
         {showSplash ? (
           <SplashScreen /> // Show SplashScreen if state is true
@@ -42,7 +38,6 @@ function App() {
           </Routes>
         )}
       </BrowserRouter>
-    </GoogleOAuthProvider>
   );
 }
 

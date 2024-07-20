@@ -8,7 +8,6 @@ export const Onboarding1 = () => {
 
   const handleGoogleSuccess = (credentialResponse) => {
     console.log("Google login success:", credentialResponse);
-    // After successful authentication, navigate (e.g., to '/home')
     navigate('/home');
   };
 
@@ -20,27 +19,25 @@ export const Onboarding1 = () => {
     <div className="onboarding-screen onboarding1"> 
       <div className="onboarding-container">
         <div className="pause-icon">{/* You can add a pause icon here */}</div>
-        <h1>Welcome to Soma.</h1>
-        <p>Your AI scholarship application assistant where you can find
+        <h1 className="welcome-text">Welcome to Soma.</h1>
+        <h3 className="description">Your AI scholarship application assistant where you can find
           personalized scholarship matches, AI-powered essay and
           document help, and stay organized with deadline reminders.
-        </p>
+        </h3>
 
-        {/* Sign Up Button (Top) */}
         <GoogleLogin
           onSuccess={handleGoogleSuccess}
           onError={handleGoogleFailure}
           buttonText="Sign up with Google"
           className="google-button signup-button"
         />
-
+        
         <p className="account-text">Already have an account? Then</p>
 
-        {/* Sign In Button (Bottom) */}
         <GoogleLogin
           onSuccess={handleGoogleSuccess}
           onError={handleGoogleFailure}
-          buttonText="Sign in with Google" 
+          buttonText="Sign in with Google"
           className="google-button login-button"
         />
       </div>

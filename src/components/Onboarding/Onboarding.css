@@ -1,105 +1,122 @@
-/* Onboarding.css */
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
 .onboarding-screen {
-  background-color: #f8e9e9; 
   display: flex;
-  flex-direction: column; 
-  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
-  font-family: 'Arial', sans-serif; 
-
-  /* Center content both vertically and horizontally */
-  justify-content: center; 
-  align-items: center; 
+  gap: 32px;
+  max-width: 360px;
+  width: 100%;
 }
 
-/* Common Header Styles (if needed) */
-.header {
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  margin-bottom: 20px; 
-  width: 100%; /* Make sure the header takes full width */
-}
-
-.page-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-/* Common Content Styles */
-.content {
-  flex: 1; 
+.onboarding-container {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  text-align: center; 
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
 }
 
-/* Onboarding1 Specific Styles */ 
-.onboarding1 .pause-icon {
-  margin-bottom: 60px; 
+.bell-icon, .pause-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #1E1548;
+  border-radius: 100px;
+  position: relative;
 }
 
-.onboarding1 h1 {
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-bottom: 15px; 
+.welcome-text {
+  width: 100%;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+  color: #32373A;
 }
 
-.onboarding1 p {
-  font-size: 1rem; 
-  line-height: 1.6; 
-  margin-bottom: 30px; 
-  color: #333; 
+.description, .account-text {
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #32373A;
 }
 
-.onboarding1 .account-text {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  color: #555; 
+.details-list {
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #32373A;
+  padding-left: 20px;
+  list-style: disc;
 }
 
-/* Google Button Styles (Shared) */
-.google-button {
-  padding: 12px 25px;
-  border-radius: 30px; 
-  border: none;
-  font-weight: bold;
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  width: 100%;
+  height: 56px;
+  border-radius: 100px;
   cursor: pointer;
-  text-align: center; 
-  margin-bottom: 10px;
-}
-
-.google-button.signup-button {
-  background-color: #2962ff;
-  color: white;
-}
-
-.google-button.login-button { 
-  background-color: white;
-  color: #2962ff;
-  border: 1px solid #2962ff; 
-}
-
-/* Onboarding2 Specific Styles */
-.onboarding2 ul {
-  text-align: left; 
-  margin-bottom: 30px; 
-  padding-left: 40px;
-}
-
-.onboarding2 .continue-button {
-  background-color: #303f9f; 
-  color: white;
-  padding: 15px 30px; 
   border: none;
-  border-radius: 25px; 
-  font-size: 1.1rem;
-  cursor: pointer;
-  margin-bottom: 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.onboarding2 .bell-icon {
-  margin-bottom: 20px; 
+.continue-button, .google-button {
+  background: #1E1548;
+  color: #FFFFFF;
+}
+
+.later-button, .signup-button, .login-button {
+  border: 1px solid #1E1548;
+  color: #32373A;
+  background: #FFFFFF;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .onboarding-screen {
+    max-width: 600px;
+  }
+
+  .welcome-text {
+    font-size: 24px;
+  }
+
+  .description, .account-text, .details-list {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .onboarding-screen {
+    max-width: 800px;
+  }
+
+  .welcome-text {
+    font-size: 28px;
+  }
+
+  .description, .account-text, .details-list {
+    font-size: 20px;
+  }
 }

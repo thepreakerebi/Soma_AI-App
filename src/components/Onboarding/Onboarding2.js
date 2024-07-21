@@ -7,7 +7,7 @@ export const Onboarding2 = () => {
   const navigate = useNavigate();
 
   const handleContinue = () => {
-    navigate('/nextstep');
+    navigate('/onboarding3'); // Navigate to Onboarding3
   };
 
   const handleLater = () => {

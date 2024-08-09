@@ -7,6 +7,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative; /* Added for positioning the icon */
 }
 
 /* Onboarding Screen Container */
@@ -40,7 +41,10 @@ body {
   height: 48px;
   border: 1px solid #1E1548;
   border-radius: 100px;
-  position: relative;
+  position: absolute; /* Positioning it absolutely */
+  left: 0; /* Align to the left */
+  top: 20px; /* Adjust as needed */
+  z-index: 10; /* Ensure it's above other content */
 }
 
 /* Progress Bar */

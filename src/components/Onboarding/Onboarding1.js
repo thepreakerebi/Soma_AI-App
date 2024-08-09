@@ -1,46 +1,34 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { GoogleLogin } from '@react-oauth/google';
-import './Onboarding.css';
+import { useCallback } from "react";
+import PropTypes from "prop-types";
+import "./LoginOptions.css";
 
-export const Onboarding1 = () => {
-  const navigate = useNavigate();
+export const Onboarding1 = ({ className = "" }) => {
+  const onGoogleButtonsClick = useCallback(() => {
+    // Handle click event
+  }, []);
 
-  const handleGoogleSuccess = (credentialResponse) => {
-    console.log("Google login success:", credentialResponse);
-    navigate('/home');
-  };
-
-  const handleGoogleFailure = (error) => {
-    console.log("Google login failure:", error);
-  };
+  const onGoogleButtonsClick1 = useCallback(() => {
+    // Handle click event
+  }, []);
 
   return (
-    <div className="onboarding-screen onboarding1"> 
-      <div className="onboarding-container">
-        <div className="pause-icon">{/* You can add a pause icon here */}</div>
-        <h1 className="welcome-text">Welcome to Soma.</h1>
-        <h3 className="description">Your AI scholarship application assistant where you can find
-          personalized scholarship matches, AI-powered essay and
-          document help, and stay organized with deadline reminders.
-        </h3>
-
-        <GoogleLogin
-          onSuccess={handleGoogleSuccess}
-          onError={handleGoogleFailure}
-          buttonText="Sign up with Google"
-          className="google-button signup-button"
-        />
-        
-        <p className="account-text">Already have an account? Then</p>
-
-        <GoogleLogin
-          onSuccess={handleGoogleSuccess}
-          onError={handleGoogleFailure}
-          buttonText="Sign in with Google"
-          className="google-button login-button"
-        />
-      </div>
-    </div>
+    <section className={`login-options ${className}`}>
+      <button className="google-buttons" onClick={onGoogleButtonsClick}>
+        <i className="bi bi-google google-icon"></i>
+        <div className="sign-up-with">Sign up with Google</div>
+      </button>
+      <div className="already-have-an">Already have an account, then</div>
+      <button className="google-buttons1" onClick={onGoogleButtonsClick1}>
+        <i className="bi bi-google google-icon1"></i>
+        <div className="log-in-with">Sign in with Google</div>
+      </button>
+    </section>
   );
 };
+
+Onboarding1.propTypes = {
+  className: PropTypes.string,
+};
+
+
+

@@ -1,8 +1,10 @@
+import React from "react";
+import "./style.css";
+
 export const SplashScreen = () => {
     return (
-        <div className="splash-screen">
-            <h1 className="logo">Soma</h1> 
-
-        </div>
-    )
-}
+      <div className="splash-screen">
+        <div className="text-wrapper">Soma</div>
+      </div>
+  );
+};

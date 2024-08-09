@@ -1,34 +1,42 @@
-import { useCallback } from "react";
-import PropTypes from "prop-types";
-import "./LoginOptions.css";
+import React, { useCallback } from 'react';
+import { FaGoogle } from 'react-icons/fa'; // Google icon
+import IconImage from '../assets/Google.png';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
+import 'bootstrap-icons/font/bootstrap-icons.css'; // Bootstrap Icons
 
-export const Onboarding1 = ({ className = "" }) => {
-  const onGoogleButtonsClick = useCallback(() => {
-    // Handle click event
+const Onboarding1 = () => {
+  const onGoogleSignUpClick = useCallback(() => {
+    // Handle Sign Up with Google click event
   }, []);
 
-  const onGoogleButtonsClick1 = useCallback(() => {
-    // Handle click event
+  const onGoogleSignInClick = useCallback(() => {
+    // Handle Sign In with Google click event
   }, []);
 
   return (
-    <section className={`login-options ${className}`}>
-      <button className="google-buttons" onClick={onGoogleButtonsClick}>
-        <i className="bi bi-google google-icon"></i>
-        <div className="sign-up-with">Sign up with Google</div>
+    <section className="text-center mt-8">
+      <button
+        className= "bg-[#1E1548] text-white rounded-full px-16 py-2 flex items-center justify-center mb-4"
+        onClick={onGoogleSignUpClick}
+      >
+        <img src={IconImage} alt="Icon Description" className="icon-class mr-2" />
+        Sign up with Google
       </button>
-      <div className="already-have-an">Already have an account, then</div>
-      <button className="google-buttons1" onClick={onGoogleButtonsClick1}>
-        <i className="bi bi-google google-icon1"></i>
-        <div className="log-in-with">Sign in with Google</div>
+
+      <p className="text-gray-500 mb-4">Already have an account?</p>
+
+      <button
+        className=" text-[#1E1548] rounded-full px-16 py-3 flex items-center justify-center border border-blue-800"
+        onClick={onGoogleSignInClick}
+      >
+        <img src={IconImage} alt="Icon Description" className="icon-class mr-2" />
+        Log in with Google
       </button>
     </section>
   );
 };
 
-Onboarding1.propTypes = {
-  className: PropTypes.string,
-};
+export default Onboarding1;
 
 
 

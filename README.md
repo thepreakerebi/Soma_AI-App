@@ -5,17 +5,22 @@ Welcome to the Soma AI GitHub repository! Soma AI is a scholarship matching and 
 ## Structure
 The repository is structured as follows:
 
-backend/: This directory contains the backend code for Soma AI, including the API endpoints, database models, and business logic. The backend is implemented in Python using the Django framework to handle user profiles, scholarship data scraping, and matching algorithms.
-frontend/: In this directory, you will find the frontend code for Soma AI, implemented using JavaScript, React, and Redux. This directory also includes the HTML, CSS, and JavaScript files that define the user interface, allowing students to interact with the platform seamlessly.
-models/: This directory houses the AI/ML models used by Soma AI to personalize scholarship matching and assist with application document creation and editing. These models are built using Python-based AI/ML libraries and play a critical role in enhancing user experience and effectiveness in scholarship applications.
+backend: This directory contains the backend code for Soma AI, including the API endpoints, database models, and business logic. The backend is implemented in Python using the Django framework to handle user profiles, scholarship data scraping, and matching algorithms.
+
+frontend: In this directory, you will find the frontend code for Soma AI, implemented using JavaScript, React, and Redux. This directory also includes the HTML, CSS, and JavaScript files that define the user interface, allowing students to interact with the platform seamlessly.
+
+models: This directory houses the AI/ML models used by Soma AI to personalize scholarship matching and assist with application document creation and editing. These models are built using Python-based AI/ML libraries and play a critical role in enhancing user experience and effectiveness in scholarship applications.
 
 ## Purpose
 The purpose of this repository is to provide a collaborative space for the development and continuous improvement of the Soma AI platform. By making the repository publicly accessible, we aim to engage the community, allowing developers, contributors, and users to explore the codebase, report issues, and suggest enhancements.
 
 ## How AI Models Are Solving the Problem
 Soma AI leverages advanced AI models to provide personalized scholarship matching and AI-powered writing assistance:
+
 Personalized Scholarship Matching: The AI models analyze user profiles, including academic history, interests, and financial needs, to match them with the most relevant scholarships. The models continuously learn from user interactions to improve the accuracy of matches over time.
+
 AI-Powered Writing Assistance: Soma AI includes AI-driven tools that assist users in creating and editing documents required for scholarship applications. These tools help with drafting personal statements, essays, and recommendation letters, while ensuring the content is clear, concise, and aligned with scholarship requirements.
+
 By integrating these AI models, Soma AI simplifies the scholarship application process, making it more efficient and increasing the chances of success for students.
 
 

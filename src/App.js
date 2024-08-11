@@ -131,6 +131,7 @@ function App() {
     '/onboarding23',
     '/onboarding24',
     '/onboarding25',
+    '/',
   ].includes(location.pathname);
 
   return (
